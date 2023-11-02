@@ -14,15 +14,19 @@ match op:
     case '+':
         summ = cal.add(a, b)
         print("{} + {} = {}".format(a, b, summ))
+        exit(0)
     case '-':
         sub = cal.sub(a, b)
         print("{} - {} = {}".format(a, b, sub))
+        exit(0)
     case '*':
         mul = cal.mul(a, b)
         print("{} * {} = {}".format(a, b, mul))
+        exit(0)
     case '/':
         div = cal.div(a, b)
         print("{} / {} = {}".format(a, b, int(div)))
+        exit(0)
     case _:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
