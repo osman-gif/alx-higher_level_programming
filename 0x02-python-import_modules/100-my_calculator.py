@@ -12,20 +12,16 @@ if __name__ == "__main__":
 
     match op:
         case '+':
-            summ = add(a, b)
-            print("{} + {} = {}".format(a, b, summ))
+            print("{} + {} = {}".format(a, b, add(a, b)))
             exit(0)
         case '-':
-            sub = sub(a, b)
-            print("{} - {} = {}".format(a, b, sub))
+            print("{} - {} = {}".format(a, b, sub(a, b)))
             exit(0)
         case '*':
-            mul = mul(a, b)
-            print("{} * {} = {}".format(a, b, mul))
+            print("{} * {} = {}".format(a, b, mul(a, b)))
             exit(0)
         case '/':
-            div = div(a, b)
-            print("{} / {} = {}".format(a, b, int(div)))
+            print("{} / {} = {}".format(a, b, int(div(a, b))))
             exit(0)
         case _:
             print("Unknown operator. Available operators: +, -, * and /")
