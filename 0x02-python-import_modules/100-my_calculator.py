@@ -23,6 +23,9 @@ match op:
     case '/':
         div = cal.div(a, b)
         print("{} / {} = {}".format(a, b, int(div)))
+    case _:
+        print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
 
 if __name__ == "__main__":
     import sys
