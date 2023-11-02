@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     match op:
         case '+':
-            print("{} + {} = {}".format(a, b, add(a, b)))
+            print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
             exit(0)
         case '-':
             print("{} - {} = {}".format(a, b, sub(a, b)))
