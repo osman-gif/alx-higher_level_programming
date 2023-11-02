@@ -1,12 +1,8 @@
 #!/usr/bin/python3
-
-import calculate_1 as cal
-
-a = 10
-b = 5
-
 if __name__ == "__main__":
-
+    import calculate_1 as cal
+    a = 10
+    b = 5
     summ = cal.add(a, b)
     print("{} + {} = {}".format(a, b, summ))
     sub = cal.sub(a, b)
