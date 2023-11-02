@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 from add_0 import add
+import sys
 
-a = 1
-b = 2
+if __name__ == "__main__":
+    a = 1
+    b = 2
 
-sum = add(a, b)
+    sum = add(a, b)
 
-print("{}".format(sum))
+    print("{}".format(sum))
