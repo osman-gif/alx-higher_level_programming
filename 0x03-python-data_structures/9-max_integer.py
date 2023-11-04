@@ -8,7 +8,7 @@ def max_integer(my_list=[]):
 
     for i in my_list:
         if i is None:
-            return None
+            continue
         if i > big:
             big = i
     return (big)
