@@ -31,19 +31,20 @@ listint_t *reverse_list(listint_t **head)
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *ptr, *ptr1, *reversed;
+	listint_t *ptr1, *reversed;
 
 	if (*head == NULL)
 		return (1);
 
-	ptr = *head;
+	/*ptr = *head;*/
 	reversed = reverse_list(head);
 	ptr1 = reversed;
 
-	for (; ptr != NULL && ptr1 != NULL; ptr = ptr->next, ptr1 = ptr1->next)
+	for (; *head != NULL && ptr1 != NULL;
+			*head = (*head)->next, ptr1 = ptr1->next)
 	{
 
-		if (ptr->n != ptr1->n)
+		if ((*head)->n != ptr1->n)
 		{
 			return (0);
 		}
