@@ -46,6 +46,7 @@ int is_palindrome(listint_t **head)
 
 		if ((*head)->n != ptr1->n)
 		{
+			free_listint(reversed);
 			return (0);
 		}
 	}
