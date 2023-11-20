@@ -5,8 +5,8 @@ def list_division(my_list_1, my_list_2, list_length):
 
     for i in range(0, list_length):
         try:
-            a = int(my_list_1[i])
-            b = int(my_list_2[i])
+            a = float(my_list_1[i])
+            b = float(my_list_2[i])
             div = float(a / b)
         except TypeError:
             div = 0
