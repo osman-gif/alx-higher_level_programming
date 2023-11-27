@@ -13,7 +13,7 @@ class Rectangle:
     def square(cls, size=0):
         """ Returns a new Rectangle instance with
         height == width == size """
-        if size >=0:
+        if size >=0 and isinstance(size, int):
             return cls(size, size)
         return cls(0,0)
 
