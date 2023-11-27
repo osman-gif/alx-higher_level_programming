@@ -71,6 +71,6 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__height + self.__width) * 2
+
     def __del__(self):
         print("Bye rectangle...")
-
