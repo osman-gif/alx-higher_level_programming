@@ -16,6 +16,7 @@ class Rectangle:
         if isinstance(size, int):
             if size >= 0:
                 return cls(size, size)
+            return cls(0, 0)
         return cls(0, 0)
 
     def __init__(self, width=0, height=0):
