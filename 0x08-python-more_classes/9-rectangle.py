@@ -13,7 +13,9 @@ class Rectangle:
     def square(cls, size=0):
         """ Returns a new Rectangle instance with
         height == width == size """
-        return cls(size, size)
+        if size >=0:
+            return cls(size, size)
+        return None
 
     def __init__(self, width=0, height=0):
         Rectangle.number_of_instances += 1
