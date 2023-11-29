@@ -10,33 +10,30 @@ def matrix_divided(matrix, div):
     new_mat = [row[:] for row in matrix]
     message = "matrix must be a matrix (list of lists) of integers/floats"
 
+    if not isinstance(matrix, list):
+        raise TypeError(message)
+
     for x in range(len(matrix)):
         if not isinstance(matrix[x], list):
             raise TypeError(message)
-        for i in range(len(matrix[x])):
-            new_mat[x][i] = matrix[x][i]
-
-    if not isinstance(div, int):
-        if not isinstance(div, float):
-            raise TypeError("div must be a number")
-    if div == 0:
-        raise ZeroDivisionError("division by zero")
-
-    for x in range(len(matrix)):
-        if type(matrix) is not list:
-            raise TypeError(message)
 
         if len(matrix[x]) != raw_len:
-            raise TypeError(
+            raise ValueError(
                     "Each row of the matrix must have the same size")
 
         for i in range(len(matrix[x])):
-            if not isinstance(matrix[x], list):
+            if isinstance(div, int) or isinstance(div, float):
+                pass
+            else:
+                raise TypeError("div must be a number")
+
+            if div == 0:
+                raise ZeroDivisionError("division by zero")
+            if isinstance(matrix[x][i], int):
+                new_mat[x][i] = round(matrix[x][i] / div, 2)
+            elif isinstance(matrix[x][i], float):
+                new_mat[x][i] = round(matrix[x][i] / div, 2)
+            else:
                 raise TypeError(message)
 
-            if not isinstance(matrix[x][i], int):
-                if not isinstance(matrix[x][i], float):
-                    raise TypeError(message)
-
-            new_mat[x][i] = round(matrix[x][i] / div, 2)
     return new_mat

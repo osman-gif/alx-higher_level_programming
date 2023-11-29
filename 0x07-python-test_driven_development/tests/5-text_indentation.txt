@@ -11,3 +11,5 @@ ajang
 wew:
 <BLANKLINE>
 >>> text_indentation("")
+>>> text_indentation("osman")
+osman
