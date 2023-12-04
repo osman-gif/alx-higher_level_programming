@@ -20,7 +20,9 @@ Traceback (most recent call last):
   File "/home/ajang/COHOR_18_ALX_SE/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 27, in integer_validator
     raise ValueError(f"{name} must be greater than 0")
 ValueError: distance must be greater than 0
->>> bg.integer_validator()
+>>> bg.integer_validator("os",4.3)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+  File "/home/ajang/COHOR_18_ALX_SE/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 25, in integer_validator
+    raise TypeError(f"{name} must be an integer")
+TypeError: os must be an integer
