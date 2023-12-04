@@ -5,6 +5,7 @@ Rectangle class """
 
 Rectangle = __import__("9-rectangle").Rectangle
 
+
 class Square(Rectangle):
     """ This class models a square object with area
     method """
