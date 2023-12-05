@@ -15,5 +15,8 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    to_json(self):
+    def to_json(self):
+        """ This function returns json-like dict representation
+        of the class object """
+
         return self.__dict__
