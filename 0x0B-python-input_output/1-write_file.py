@@ -9,6 +9,6 @@ def write_file(filename="", text=""):
     the file do not exist it creates it, and it return
     the number of characters writn """
 
-    with open(filename, 'w+', encoding="UTF8") as f:
+    with open(filename, 'w', encoding="UTF8") as f:
         writen_data = f.write(text)
         return writen_data
