@@ -8,6 +8,6 @@ def append_write(filename="", text=""):
     """ This function appends text to the end
     of a file (filename) """
 
-    with open(filename, 'a', text) as f:
+    with open(filename, 'a', encoding="UTF8") as f:
         appended = f.write(text)
         return appended
