@@ -12,4 +12,4 @@ def class_to_json(obj):
     the dictionary description with simple data structure
     for JSON serialization of an object"""
 
-    return json.loads(obj.__dict__)
+    return json.dumps(obj.__dict__)
