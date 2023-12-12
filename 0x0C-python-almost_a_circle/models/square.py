@@ -67,7 +67,7 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """
-        This method returns the dictionary representation of a Square
+        This method returns the dictionary representation of a Square.
         """
 
         current_dict = self.__dict__
@@ -83,7 +83,7 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        """ This size property getter return the size of the Square
+        """ This size property getter return the size of the Square.
         """
 
         return self.__size
@@ -106,6 +106,6 @@ class Square(Rectangle):
     def __str__(self):
         """
         This method returns a string that represent square
-        object
+        object.
         """
         return f"[Square] ({self.id}) {super().x}/{super().y} - {self.size}"

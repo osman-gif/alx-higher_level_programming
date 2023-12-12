@@ -2,7 +2,8 @@
 
 
 """
-This module defines a class that modles a rectangle
+This module defines a class that models a rectangle, This class
+aslo inherits from the (Base) class
 """
 
 
@@ -34,7 +35,7 @@ class Rectangle(Base):
     def area(self):
         """
         This method calculates and returns the area of
-        the rectangle
+        the rectangle based on width and height
         """
 
         return self.width * self.height

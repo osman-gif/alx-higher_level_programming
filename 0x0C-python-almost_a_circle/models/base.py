@@ -16,7 +16,8 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """ This method initializes the Base class """
+        """ This method initializes the Base class, with one
+        opitional argument and zero positional argument"""
 
         if id is not None:
             self.id = id
