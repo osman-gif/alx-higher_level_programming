@@ -4,7 +4,7 @@
 This Module defines a class base which is the base class for all
 the other class to inherit from
 """
-from models.base import Base
+
 import json
 
 
