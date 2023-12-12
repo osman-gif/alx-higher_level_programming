@@ -5,8 +5,8 @@ This module defines a class that models a rectangle, This class
 aslo inherits from the (Base) class
 """
 
-from models.base import Base
 import json
+from models.base import Base
 
 
 class Rectangle(Base):
