@@ -7,6 +7,11 @@ from models.rectangle import Rectangle
 
 class TestBase(unittest.TestCase):
 
+    def test_id_auto(self):
+        b1 = Base()
+
+        self.assertEqual(b1.id, 1)
+
     def test_to_json_string(self):
         self.assertEqual(Base.to_json_string(None), "[]")
         self.assertEqual(Base.to_json_string([]), "[]")
