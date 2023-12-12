@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+from models.base import Base
 
 """
 This Module defines a class base which is the base class for all
@@ -6,7 +7,6 @@ the other class to inherit from
 """
 
 import json
-from models.base import Base
 
 
 class Base:
