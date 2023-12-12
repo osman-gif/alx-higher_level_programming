@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-import json
 
 """
 This Module defines a class base which is the base class for all
 the other class to inherit from
 """
+
+import json
 
 
 class Base:
