@@ -7,7 +7,7 @@ attributes
 """
 
 import json
-import models.base as Base
+# from models.base import Base
 
 
 class Rectangle(Base):
