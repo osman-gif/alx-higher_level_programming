@@ -6,6 +6,7 @@ the other class to inherit from
 """
 
 import json
+from models.base import Base
 
 
 class Base:
