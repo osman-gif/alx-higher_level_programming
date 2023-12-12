@@ -5,7 +5,6 @@ This module defines a class that models a rectangle, This class
 aslo inherits from the (Base) class
 """
 
-
 from models.base import Base
 import json
 
@@ -17,6 +16,7 @@ class Rectangle(Base):
     positional arguments and x, y and id as
     optional arguments
     """
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         This method initializes the Rectangle class
