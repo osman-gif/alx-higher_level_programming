@@ -2,7 +2,8 @@
 
 """
 This module defines a class that models a rectangle, This class
-aslo inherits from the (Base) class
+aslo inherits from the (Base) class with its method and
+attributes
 """
 
 import json
