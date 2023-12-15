@@ -6,6 +6,7 @@ aslo inherits from the (Base) class with its method and
 attributes
 """
 
+from models.base import Base
 import json
 
 
@@ -25,11 +26,115 @@ class Rectangle(Base):
         via the super class (Base class)
         """
 
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
-        super().__init__(id)
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+        Base(id).__init__(id)
+
+    @property
+    def width(self):
+        """
+        This getter method returns the width of Rectangle object
+        It acts as a getter to the width private attribute(__width)
+        of the Rectangle instance (object)
+        """
+
+        return self.__width
+
+    @width.setter
+    def width(self, width):
+        """
+        This setter method validate the width attributes
+        befor assigning it to the private instance
+        attribute(width) of the Rectangle instance (object)
+        """
+
+        if (type(width)) is int:
+            if width > 0:
+                self.__width = width
+            else:
+                raise ValueError("width must be > 0")
+        else:
+            raise TypeError("width must be an integer")
+
+    @property
+    def height(self):
+        """
+        This getter method returns the height of Rectangle object
+        It acts as a getter to the height private attribute(__height)
+        of the Rectangle instance (object)
+        """
+
+        return self.__height
+
+    @height.setter
+    def height(self, height):
+        """
+        This setter method validate the height attributes
+        befor assigning it to the private instance
+        attribute(__height) of the Rectangle instance (object)
+        """
+
+        if type(height) is int:
+            if height > 0:
+                self.__height = height
+            else:
+                raise ValueError("height must be > 0")
+        else:
+            raise TypeError("height must be an integer")
+
+    @property
+    def x(self):
+        """
+        This setter method returns the private instance (__x)
+        of Rectangle objectIt acts as a getter to the x private
+        attribute(__x) of the Rectangle instance (object)
+        """
+
+        return self.__x
+
+    @x.setter
+    def x(self, x):
+        """
+        This getter method validate the private instance (__x) attribute
+        befor assigning it to the private instance
+        attribute(__x) of the Rectangle instance (object)
+        """
+
+        if type(x) is int:
+            if x >= 0:
+                self.__x = x
+            else:
+                raise ValueError(f"x must be >= 0")
+        else:
+            raise TypeError("x must be an integer")
+
+    @property
+    def y(self):
+        """
+        This getter method returns the private instance (__y)
+        of Rectangle objectIt acts as a getter to the x private
+        attribute(__y) of the Rectangle instance (object)
+        """
+
+        return self.__y
+
+    @y.setter
+    def y(self, y):
+        """
+        This setter method validate the private instance (__y) attribute
+        befor assigning it to the private instance
+        attribute(__y) of the Rectangle instance (object)
+        """
+
+        if type(y) is int:
+            if y >= 0:
+                self.__y = y
+            else:
+                raise ValueError("y must be >= 0")
+        else:
+            raise TypeError(f"y must be an integer")
 
     def area(self):
         """
@@ -103,6 +208,7 @@ class Rectangle(Base):
         the object (instances of the rectangle class)
         attributes
         """
+
         current_dict = self.__dict__
         from_keys = list(self.__dict__.keys())
         to_keys = ['id', 'width', 'height', 'x', 'y']
@@ -113,105 +219,3 @@ class Rectangle(Base):
                 if item in k:
                     new_dict[item] = v
         return new_dict
-
-    @property
-    def width(self):
-        """
-        This getter method returns the width of Rectangle object
-        It acts as a getter to the width private attribute(__width)
-        of the Rectangle instance (object)
-        """
-
-        return self.__width
-
-    @width.setter
-    def width(self, width):
-        """
-        This setter method validate the width attributes
-        befor assigning it to the private instance
-        attribute(width) of the Rectangle instance (object)
-        """
-
-        if (type(width)) is int:
-            if width > 0:
-                self.__width = width
-            else:
-                raise ValueError("width must be > 0")
-        else:
-            raise TypeError("width must be an integer")
-
-    @property
-    def height(self):
-        """
-        This getter method returns the height of Rectangle object
-        It acts as a getter to the height private attribute(__height)
-        of the Rectangle instance (object)
-        """
-        return self.__height
-
-    @height.setter
-    def height(self, height):
-        """
-        This setter method validate the height attributes
-        befor assigning it to the private instance
-        attribute(__height) of the Rectangle instance (object)
-        """
-        if (type(height)) is int:
-            if height > 0:
-                self.__height = height
-            else:
-                raise ValueError("height must be > 0")
-        else:
-            raise TypeError("height must be an integer")
-
-    @property
-    def x(self):
-        """
-        This setter method returns the private instance (__x)
-        of Rectangle objectIt acts as a getter to the x private
-        attribute(__x) of the Rectangle instance (object)
-        """
-
-        return self.__x
-
-    @x.setter
-    def x(self, x):
-        """
-        This getter method validate the private instance (__x) attribute
-        befor assigning it to the private instance
-        attribute(__x) of the Rectangle instance (object)
-        """
-
-        if (type(x)) is int:
-            if x >= 0:
-                self.__x = x
-            else:
-                raise ValueError(f"x must be >= 0")
-        else:
-            raise TypeError("x must be an integer")
-
-    @property
-    def y(self):
-        """
-        This getter method returns the private instance (__y)
-        of Rectangle objectIt acts as a getter to the x private
-        attribute(__y) of the Rectangle instance (object)
-        """
-
-        return self.__y
-
-    @y.setter
-    def y(self, y):
-        """
-        This setter method validate the private instance (__y) attribute
-        befor assigning it to the private instance
-        attribute(__y) of the Rectangle instance (object)
-        """
-
-        if (type(y)) is int:
-            if y >= 0:
-                self.__y = y
-            else:
-                raise ValueError("y must be >= 0")
-        else:
-            raise TypeError("y must be an integer")

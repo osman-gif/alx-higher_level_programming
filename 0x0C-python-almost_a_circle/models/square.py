@@ -108,4 +108,4 @@ class Square(Rectangle):
         This method returns a string that represent square
         object.
         """
-        return f"[Square] ({self.id}) {super().x}/{super().y} - {self.size}"
+        return f"[Square] ({id}) {super().x}/{super().y} - {self.size}"
