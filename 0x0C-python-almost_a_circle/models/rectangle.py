@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+from models.base import Base
 """
 This module defines a class that models a rectangle, This class
 aslo inherits from the (Base) class with its method and
