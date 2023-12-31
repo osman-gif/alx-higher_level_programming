@@ -6,9 +6,9 @@ aslo inherits from the (Base) class with its method and
 attributes
 """
 
-from models.base import Base
-import json
+from base import Base
 
+import json
 
 class Rectangle(Base):
     """
@@ -30,7 +30,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        Base(id).__init__(id)
+        super().__init__(id)
 
     @property
     def width(self):
