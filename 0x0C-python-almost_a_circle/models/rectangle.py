@@ -6,7 +6,7 @@ aslo inherits from the (Base) class with its method and
 attributes
 """
 
-from base import Base
+from models.base import Base
 
 import json
 
