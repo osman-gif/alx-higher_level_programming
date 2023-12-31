@@ -8,8 +8,6 @@ attributes
 
 from models.base import Base
 
-import json
-
 
 class Rectangle(Base):
     """
