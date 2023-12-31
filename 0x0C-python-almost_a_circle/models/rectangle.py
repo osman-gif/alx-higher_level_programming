@@ -10,6 +10,7 @@ from base import Base
 
 import json
 
+
 class Rectangle(Base):
     """
     This class inherits from (Base) class and
