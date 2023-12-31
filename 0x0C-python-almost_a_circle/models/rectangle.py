@@ -6,8 +6,6 @@ aslo inherits from the (Base) class with its method and
 attributes
 """
 
-from base import Base
-
 
 class Rectangle(Base):
     """
