@@ -6,7 +6,7 @@ aslo inherits from the (Base) class with its method and
 attributes
 """
 
-from models.base import Base
+from .base import Base
 
 
 class Rectangle(Base):
