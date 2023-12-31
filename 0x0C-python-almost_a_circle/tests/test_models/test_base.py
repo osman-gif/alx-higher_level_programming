@@ -1,16 +1,21 @@
 #!/usr/bin/python3
-import unittest
 from models.base import Base
 from models.square import Square
 from models.rectangle import Rectangle
+import unittest
 
 
 class TestBase(unittest.TestCase):
 
-    def test_id_auto(self):
-        b1 = Base()
+    def setUp(self):
+        self.b1 = Base()
+        self.b2 = Base()
 
-        self.assertEqual(b1.id, 1)
+    def test_id_auto(self):
+        #b1 = Base()
+        self.assertEqual(self.b1.id, 3)
+        #b2 = Base(1)
+        self.assertEqual(self.b2.id, 4)
 
     def test_to_json_string(self):
         self.assertEqual(Base.to_json_string(None), "[]")

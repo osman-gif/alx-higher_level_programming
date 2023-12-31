@@ -24,21 +24,21 @@ class TestSquare(unittest.TestCase):
 
         self.assertEqual(
                 self.s1.to_dictionary(),
-                {'id': 14, 'size': 2, 'x': 0, 'y': 0})
+                {'id': 5, 'size': 2, 'x': 0, 'y': 0})
         self.assertEqual(
                 self.s2.to_dictionary(),
-                {'id': 15, 'size': 2, 'x': 2, 'y': 2})
+                {'id': 6, 'size': 2, 'x': 2, 'y': 2})
 
     def test_str__(self):
 
-        self.assertEqual(self.s2.__str__(), '[Square] (13) 2/2 - 2')
+        self.assertEqual(self.s2.__str__(), '[Square] (4) 2/2 - 2')
 
     def test_update(self):
         kwargs = {"x": 10, "y": 20}
         args = (1, 1, 1, 1)
 
         self.s1.update(**kwargs)
-        self.assertEqual(str(self.s1), '[Square] (16) 10/20 - 2')
+        self.assertEqual(str(self.s1), '[Square] (7) 10/20 - 2')
 
         self.s1.update(*args)
         self.assertEqual(str(self.s1), '[Square] (1) 1/1 - 1')

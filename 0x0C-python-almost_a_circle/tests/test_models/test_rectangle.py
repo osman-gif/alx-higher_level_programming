@@ -19,15 +19,15 @@ class TestRectangle(unittest.TestCase):
 
     def test_str(self):
         self.assertEqual(
-                str(self.r1), '[Rectangle] (7) 2/2 -\n            2 2')
+                str(self.r1), '[Rectangle] (3) 2/2 -\n            2 2')
 
     def test_update(self):
         self.r1.update(**self.kwargs)
         self.assertEqual(
-                str(self.r1), '[Rectangle] (9) 10/20 -\n            2 2')
+                str(self.r1), '[Rectangle] (5) 10/20 -\n            2 2')
 
     def test_to_dictionary(self):
         self.r1.to_dictionary()
         self.assertEqual(
                 str(self.r1.to_dictionary()
-                    ), "{'id': 8, 'width': 2, 'height': 2, 'x': 2, 'y': 2}")
+                    ), "{'id': 4, 'width': 2, 'height': 2, 'x': 2, 'y': 2}")
