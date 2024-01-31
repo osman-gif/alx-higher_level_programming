@@ -1,3 +1,4 @@
+--  displays the average temperature
 SELECT
 city,
 AVG(value) AS average_temperature
