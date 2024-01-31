@@ -7,4 +7,4 @@ temperatures
 GROUP BY
 city
 ORDER BY
-average_temperature DESC;
+avg_temp DESC;
