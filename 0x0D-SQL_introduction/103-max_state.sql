@@ -1,14 +1,14 @@
 -- displays the max temperature of each state (ordered by State name).
 SELECT
-city,
-MAX(value) AS max_temperature
+state,
+MAX(value) AS max_temp
 FROM
 temperatures
 WHERE
 month IN (7, 8)
 GROUP BY
-city
+state
 ORDER BY
-max_temperature DESC
+state
 LIMIT 3;
 
