@@ -7,7 +7,6 @@ const argument = process.argv.slice(2);
 const num = argument[0];
 
 if (argument.length === 1 && !isNaN(parseInt(num))) {
-  const num = argument[0];
   let count = 0;
   while (count < num) {
     console.log('C is fun');
