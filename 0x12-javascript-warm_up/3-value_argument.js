@@ -10,3 +10,4 @@ if (argument.length === 0) {
 } else if (argument.length === 1) {
   console.log(argument[0]);
 }
+
