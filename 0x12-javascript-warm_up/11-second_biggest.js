@@ -9,18 +9,18 @@ const arg = process.argv.slice(2);
 if (arg.length === 0 || arg.length === 1) {
   console.log(0);
 } else {
-  let fBig = parseInt(arg[0]);
-  let sBig = parseInt(arg[1]);
+  let fBig = 0;
+  let sBig = 0;
 
   for (let i = 0; i < arg.length; i++) {
-    if (fBig < arg[i]) {
-      fBig = arg[i];
+    if (fBig < parseInt(arg[i])) {
+      fBig = parseInt(arg[i]);
     }
   }
 
   for (let i = 0; i < arg.length; i++) {
-    if (sBig < arg[i] && !(arg[i] === fBig)) {
-      sBig = arg[i];
+    if (sBig < parseInt(arg[i]) && !(parseInt(arg[i]) === fBig)) {
+      sBig = parseInt(arg[i]);
     }
   }
 
