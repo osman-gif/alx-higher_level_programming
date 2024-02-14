@@ -5,8 +5,8 @@
  * inherits from Rectangle of 4-rectangle.js
  */
 
-const Rectangle = require('./4-rectangle');
-class Square extends Rectangle {
+const Square1 = require('./5-square');
+class Square extends Square1 {
   constructor (size) {
     super(size, size); this.size = size;
   }
