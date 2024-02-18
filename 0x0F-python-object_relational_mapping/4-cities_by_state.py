@@ -11,7 +11,9 @@ if __name__ == '__main__':
     pwd = sys.argv[2]
     db = sys.argv[3]
 
-    query = "SELECT * FROM cities ORDER BY id"
+    query = "SELECT cities.id, cities.name,\
+        states.name FROM cities JOIN states \
+            ON state_id = states.id  ORDER BY cities.id"
 
     connect = MySQLdb.connect(user=usr, passwd=pwd, database=db)
     cur = connect.cursor()
