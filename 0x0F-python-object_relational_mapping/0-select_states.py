@@ -9,7 +9,7 @@ if __name__ == '__main__':
     pwd = sys.argv[2]
     db = sys.argv[3]
 
-    connect = MySQLdb.connect(database = db, user = usr, passwd = pwd)
+    connect = MySQLdb.connect(database=db, user=usr, passwd=pwd)
     cursor = connect.cursor()
 
     cursor.execute('SELECT * FROM states')
@@ -20,4 +20,3 @@ if __name__ == '__main__':
 
     cursor.close()
     connect.close()
-
