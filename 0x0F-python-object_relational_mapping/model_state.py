@@ -16,5 +16,6 @@ if __name__ == '__main__':
         """
         __tablename__ = 'states'
         id = Column(Integer(11),
-                    primary_key=True, unique=True, autoincrement=True)
+                    primary_key=True, unique=True,
+                    autoincrement=True, nullable=False)
         name = Column(String(128), nullable=False)
