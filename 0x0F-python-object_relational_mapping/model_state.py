@@ -15,5 +15,6 @@ if __name__ == '__main__':
         """This class models a state
         """
         __tablename__ = 'states'
-        id = Column(Integer(11), primary_key=True)
+        id = Column(Integer(11),
+                    primary_key=True, unique=True, autoincrement=True)
         name = Column(String(128))
