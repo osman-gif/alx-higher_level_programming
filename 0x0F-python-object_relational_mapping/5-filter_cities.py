@@ -27,4 +27,5 @@ if __name__ == '__main__':
         if i+1 != len(cities):
             print(cities[i][1], end=", ")
         else:
-            print(cities[i][1])
+            print(cities[i][1], end="")
+    print()
