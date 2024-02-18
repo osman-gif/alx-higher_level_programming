@@ -12,7 +12,7 @@ if __name__ == '__main__':
     usr = sys.argv[1]
     pwd = sys.argv[2]
     db = sys.argv[3]
-    name = sys.argv[4]
+    n = sys.argv[4]
 
     engine = create_engine('mysql://{}:{}@localhost/{}'.format(usr, pwd, db))
     Base.metadata.create_all(engine)
@@ -21,7 +21,10 @@ if __name__ == '__main__':
 
     my_session = Session()
 
-    states = my_session.query(State).filter_by(name=name).order_by(State.id)
+    states = my_session.query(State).filter_by(name=n).order_by(State.id).all()
 
-    for stat in states:
-        print('{}'.format(stat.id))
+    if states:
+        for state in states:
+            print('{}'.format(state.id))
+    else:
+        print('Not found')
