@@ -11,7 +11,7 @@ usr = sys.argv[1]
 pwd = sys.argv[2]
 db = sys.argv[3]
 
-engine = create_engine('mysql://{}:{}@localhost/{}'.format(usr,pwd,db))
+engine = create_engine('mysql://{}:{}@localhost/{}'.format(usr, pwd, db))
 Base.metadata.create_all(engine)
 
 Session = sessionmaker(bind=engine)
