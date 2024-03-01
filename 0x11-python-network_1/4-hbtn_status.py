@@ -7,6 +7,5 @@ and displays the body of the response (decoded in utf-8).
 import requests
 
 response = requests.get('https://alx-intranet.hbtn.io/status')
-print(
-    f'Body response:\n\
-        \t- type: {type(response.text)}\n\t- content: {response.text}')
+print(f'Body response:')
+print('\t- type: {type(response.text)}\n\t- content: {response.text}')
