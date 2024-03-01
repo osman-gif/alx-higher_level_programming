@@ -12,6 +12,6 @@ if __name__ == '__main__':
     url = sys.argv[1]
     email = sys.argv[2]
     paylod = {'email': email}
-    response = requests.post(url, params=paylod)
+    response = requests.post(url, data=paylod)
     body = response.text
     print(body)
