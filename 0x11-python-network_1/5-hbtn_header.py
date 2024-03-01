@@ -8,7 +8,8 @@ variable found in the header of the response.
 import requests
 import sys
 
-url = sys.argv[1]
-response = requests.get(url)
-X_Request_Id = response.headers['X-Request-Id']
-print(f'{X_Request_Id}')
+if __name__ == '__main__':
+    url = sys.argv[1]
+    response = requests.get(url)
+    X_Request_Id = response.headers['X-Request-Id']
+    print(f'{X_Request_Id}')
