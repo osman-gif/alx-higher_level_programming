@@ -8,4 +8,4 @@ import requests
 
 response = requests.get('https://alx-intranet.hbtn.io/status')
 print(f'Body response:')
-print('\t- type: {type(response.text)}\n\t- content: {response.text}')
+print(f'\t- type: {type(response.text)}\n\t- content: {response.text}')
