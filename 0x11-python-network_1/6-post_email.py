@@ -13,5 +13,5 @@ if __name__ == '__main__':
     email = sys.argv[2]
     paylod = {'email': email}
     response = requests.get(url, params=paylod)
-    content = response.content
-    print(content)
+    body = response.request.body
+    print(body)
