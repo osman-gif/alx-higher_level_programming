@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-from urllib.request import Request, urlopen
 """
  Python script that fetches https://alx-intranet.hbtn.io/status
 """
+
+from urllib.request import Request, urlopen
+
 if __name__ == '__main__':
 
     url = "https://alx-intranet.hbtn.io/status"
