@@ -7,22 +7,24 @@
 import sys
 import requests
 
-url = 'http://0.0.0.0:5000/search_user'
+if __name__ == '__main__':
 
-if len(sys.argv) < 2:
-    letter = ""
-else:
-    letter = sys.argv[1]
+    url = 'http://0.0.0.0:5000/search_user'
 
-paylod = {'q': letter}
-
-try:
-    response = requests.post(url, paylod).json()
-
-    if response:
-        print(f"[{response.get('id')}] {response.get('name')}")
+    if len(sys.argv) < 2:
+        letter = ""
     else:
-        print('No result')
+        letter = sys.argv[1]
 
-except ValueError as e:
-    print('Not a valid JSON')
+    paylod = {'q': letter}
+
+    try:
+        response = requests.post(url, paylod).json()
+
+        if response:
+            print(f"[{response.get('id')}] {response.get('name')}")
+        else:
+            print('No result')
+
+    except ValueError as e:
+        print('Not a valid JSON')
