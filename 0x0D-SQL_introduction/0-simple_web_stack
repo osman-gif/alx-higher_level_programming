@@ -1,0 +1,23 @@
+SERVER:
+A server is a computer that provides resources and services to other computer on
+A network
+
+DOMAIN NAME:
+A domain_name is used as alias to server ip address,  cuz it is easy to remember
+by humans
+
+DNS TYPE RECORD:
+The address record is an A record(Address record) which maps domain name to
+ip address
+
+WEB SERVER:
+Handles http requests of the user, it serves static content, forward requests
+to application server for dynamic content
+
+APP SERVER:
+App server execute back end logic of the web app, process dynamic content and
+generate response to client requests and intercats with the database server
+
+DATABASE SERVER:
+Store, manage and provide app server, it is respoinsble for stroring and retrieves
+information requested by the web app
