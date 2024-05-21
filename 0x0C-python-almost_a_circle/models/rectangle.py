@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 
+import sys
 from models.base import Base
+import models
+
 """
 This module defines a class that models a rectangle, This class
 aslo inherits from the (Base) class with its method and
@@ -9,6 +12,7 @@ attributes
 
 
 class Rectangle(Base):
+
     """
     This class inherits from (Base) class and
     it models a rectangle, with width and height as
@@ -16,6 +20,7 @@ class Rectangle(Base):
     optional arguments
     """
 
+    print(sys.path)
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         This method initializes the Rectangle class
@@ -23,12 +28,11 @@ class Rectangle(Base):
         arguments, the (id) argument will be initialized
         via the super class (Base class)
         """
-
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
-        super().__init__(id)
 
     @property
     def width(self):
@@ -217,3 +221,4 @@ class Rectangle(Base):
                 if item in k:
                     new_dict[item] = v
         return new_dict
+

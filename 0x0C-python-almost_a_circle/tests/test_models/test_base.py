@@ -65,4 +65,4 @@ class TestBase(unittest.TestCase):
         with self.assertRaises(TypeError):
             Base.save_to_file(4)
         with self.assertRaises(NameError):
-            Base.save_to_file(name)
+            Base.save_to_file(__name__)

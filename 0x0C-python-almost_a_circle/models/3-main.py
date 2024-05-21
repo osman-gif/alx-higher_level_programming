@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-
 """ 3-main """
 from models.rectangle import Rectangle
-import sys
 
 if __name__ == "__main__":
 
@@ -14,7 +12,4 @@ if __name__ == "__main__":
 
     r3 = Rectangle(8, 7, 0, 0, 12)
     print(r3.area())
-    print(sys.path)
-    sys.path.append('.models')
-    print(sys.path)
 

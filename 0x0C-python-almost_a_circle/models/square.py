@@ -5,8 +5,7 @@ This module defines a class (Square) that inherits
 from the class (Rectangle)
 """
 
-from models.rectangle import Rectangle
-
+from rectangle import Rectangle
 
 class Square(Rectangle):
     """
@@ -20,7 +19,6 @@ class Square(Rectangle):
         arguments, three are optional arguments and one
         positional
         """
-
         self.size = size
         super().__init__(size, size, x, y, id)
 
@@ -108,4 +106,5 @@ class Square(Rectangle):
         This method returns a string that represent square
         object.
         """
-        return f"[Square] ({id}) {super().x}/{super().y} - {self.size}"
+        return f"[Square] ({self.id}) {super().x}/{super().y} - {self.size}"
+

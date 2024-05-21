@@ -6,6 +6,7 @@ the other class to inherit from
 """
 
 import json
+import sys
 
 
 class Base:
@@ -15,12 +16,14 @@ class Base:
     goal of this class is to mangage id attribute in all its subclass
     """
     __nb_objects = 0
+    print(sys.path)
 
     def __init__(self, id=None):
         """ This method initializes the Base class, with one
         opitional argument and zero positional argument"""
 
         if id is not None:
+            #Base.__nb_objects += 1
             self.id = id
         else:
             Base.__nb_objects += 1
@@ -84,8 +87,8 @@ class Base:
             pass
         else:
             for i in range(len(list_objs)):
-
                 objs_list.append(list_objs[i].__dict__)
+
         with open(f"{cls.__name__}" + ".json", 'w') as file:
             file.write(str(objs_list))
 

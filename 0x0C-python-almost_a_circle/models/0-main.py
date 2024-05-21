@@ -1,5 +1,6 @@
-#!/usr/bin/python3
+#!/usr/bin/python3.10
 """ 0-main """
+import models.base
 from models.base import Base
 
 if __name__ == "__main__":
