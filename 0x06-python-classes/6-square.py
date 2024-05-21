@@ -5,7 +5,7 @@
 class Square:
 
     """ This class is to model a square """
-
+    
     def area(self):
         """ Returns the current squared area """
 
@@ -16,12 +16,12 @@ class Square:
 
         if self._size == 0:
             print("")
-        if self.position[1] != 0:
+        if self._position[1] != 0:
             print("")
 
         for i in range(0, self._size):
-            for i in range(0, self.position[0]):
-                if self.position[1] > 0:
+            for i in range(0, self._position[0]):
+                if self._position[1] > 0:
                     print("", end="")
                 print(" ", end="")
 
@@ -29,10 +29,11 @@ class Square:
                 print("#", end="")
             print("")
 
+
     @property
     def size(self):
-        """ gets the size of the current area """
 
+        """ gets the size of the current area """
         return self._size
 
     @size.setter
@@ -62,8 +63,9 @@ class Square:
                         of 2 positive integers """)
         self._position = _position
 
-    def __init__(self, _size=0, _position=(0, 0)):
+
+    def __init__(self, _size=0, __position=(0, 0)):
         """ Initilaizes an instance of square class """
 
         self._size = _size
-        self._position = _position
+        self._position = __position

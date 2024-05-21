@@ -9,7 +9,7 @@ class MyInt(int):
     and != operators """
 
     def __init__(self, num):
-        """ This function Initializes the MyInt instance """
+        """ This function Initializes the MyInt instance variable. """
         self.num = num
 
     def __eq__(self, other):

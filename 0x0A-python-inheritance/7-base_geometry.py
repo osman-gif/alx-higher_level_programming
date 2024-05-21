@@ -21,7 +21,10 @@ class BaseGeometry:
         if value is less or equal to 0: raise a ValueError
         """
 
-        if not (type(value) is int):
-            raise TypeError(f"{name} must be an integer")
-        elif value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
+        if name and value:
+            if not (type(value) is int):
+                raise TypeError(f"{name} must be an integer")
+            elif value <= 0:
+                raise ValueError(f"{name} must be greater than 0")
+        else:
+            raise TypeError("BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'")

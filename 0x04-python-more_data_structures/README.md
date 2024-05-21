@@ -1,1 +1,1 @@
-This is the 0x04-python-more_data_structures folder where is will be building projects that implements python's data structres like: list, tuple, dictionaries and sets
+This is the 0x04-python-more_da4-python-more_data_structures project folder where I will be building programs and functions by implementing the Pyhton data sctructures sets and dictionaries

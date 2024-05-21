@@ -7,7 +7,8 @@ import json
 
 
 def load_from_json_file(filename):
-    """ This a function that creates an Object from a JSON file
+    """ This a function that loads json file and return
+    its python representation
     """
 
     with open(filename) as file:
