@@ -15,10 +15,9 @@ if __name__ == '__main__':
 	cursor = mydb.cursor()
 
 	query_db = 'USE hbtn_0e_0_usa'
-	query_all = 'SELECT * FROM states ORDER BY states.id HAVING "N"'
-
-	cursor.execute(query_db)
-	states = cursor.execute(query_all)
+	query_all = 'SELECT * FROM states WHERE name LIKE "N%" ORDER BY id'
+	cursor.execute(query_all)
+	states = cursor.fetchall()
 	for state in states:
 		print(state)
 
