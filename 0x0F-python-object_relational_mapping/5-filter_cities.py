@@ -13,7 +13,7 @@ if __name__ == '__main__':
 
     cursor = mydb.cursor()
     state_cities = """SELECT c.name FROM cities as c INNER JOIN states
-    as s ON state_id=s.id WHERE s.name="{}" ORDER BY c.id""".format(state)
+    as s ON state_id=s.id WHERE s.name="{}" ORDER BY c.id ASC""".format(state)
     cursor.execute(state_cities)
     cities = cursor.fetchall()
     for i in range(len(cities)):
