@@ -12,7 +12,8 @@ if __name__ == '__main__':
     search = sys.argv[4]
     mydb = MySQLdb.connect('localhost', username, password, database, 3306)
     cursor = mydb.cursor()
-    q = 'SELECT * FROM states WHERE name="{}" ORDER BY states.id ASC'.format(search)
+    q = """SELECT * FROM states WHERE BINARY name="{}"
+    ORDER BY states.id ASC""".format(search)
     cursor.execute(q)
     states = cursor.fetchall()
     for state in states:
