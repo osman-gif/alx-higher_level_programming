@@ -1,17 +1,22 @@
 #!/usr/bin/python3
 
-username = sys.argv[1]
-password = sys.argv[2]
-database = sys.argv[3]
-state = sys.argv[4]
-
 if __name__ == '__main__':
-	import MySQLdb
-	mydb = MySQLdb.connect(host='localhost',
-		user=username, password=password,db=database, port=3306)
+    import MySQLdb
+    import sys
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
+    state = sys.argv[4]
 
-	cursor = mydb.cursor()
-	state_cities = 'SELECT * FROM cities INNER JOIN states ON state_id=state.id ORDER BY cities.id'
-	
-	for state in state_cities:
-		print(state)
+    mydb = MySQLdb.connect('localhost', username, password, database, 3306)
+
+    cursor = mydb.cursor()
+    state_cities = """SELECT c.name FROM cities as c INNER JOIN states
+    as s ON state_id=s.id WHERE s.name="{}" ORDER BY c.id""".format(state)
+    cursor.execute(state_cities)
+    cities = cursor.fetchall()
+    for i in range(len(cities)):
+        if i == len(cities) - 1:
+            print(cities[i][0])
+        else:
+            print(cities[i][0], end=", ")
