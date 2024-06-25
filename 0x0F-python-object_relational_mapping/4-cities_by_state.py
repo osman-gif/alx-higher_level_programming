@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 """Write a script that lists all cities from the database hbtn_0e_0_usa"""
-import sys
 
-username = sys.argv[1]
-password = sys.argv[2]
-database = sys.argv[3]
 
 if __name__ == '__main__':
     import MySQLdb
+    import sys
+
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
     mydb = MySQLdb.connect('localhost', username, password, database, 3306)
 
     cursor = mydb.cursor()
