@@ -17,6 +17,6 @@ if __name__ == '__main__':
         repos = response.text.split(',')
         for i in repos:
             print(i)
-        #print(repos)
+        # print(repos)
     else:
         print(None)
